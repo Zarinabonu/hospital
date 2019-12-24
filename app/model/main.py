@@ -1,0 +1,43 @@
+from django.db import models
+
+
+class Main(models.Model):
+    register_num = models.IntegerField( default=0)
+    otdel = models.CharField(max_length=45)
+    surname = models.CharField(max_length=45)
+    name = models.CharField(max_length=45)
+    fath_name = models.CharField(max_length=45)
+    date_birth = models.IntegerField(default=0)
+    iib_employee = models.IntegerField(default=0)
+    work_place = models.CharField(max_length=150)
+    unvon = models.CharField(max_length=45)
+    viloyat = models.CharField(max_length=45)
+    address = models.CharField(max_length=100)
+    from_him = models.CharField(max_length=70)
+    ekstr = models.IntegerField(default=0)
+    date_start = models.DateField()
+    result_hos = models.CharField(max_length=45)
+    diagnoz = models.CharField(max_length=200)
+    date_finish = models.DateField()
+    qancha = models.IntegerField(max_length=2, default=0)
+    vrach = models.CharField(max_length=45)
+    summa = models.FloatField(default=0.00)
+    obshi_summa = models.FloatField(default=0.00)
+    ligodnik = models.IntegerField(default=0)
+    dnevnoy_statsionar = models.IntegerField(default=0)
+    summa_check = models.IntegerField(default=0)
+    reason = models.CharField(max_length=60)
+    xro_os = models.IntegerField(default=0)
+    kursant = models.IntegerField(default=0)
+    kasbi = models.CharField(max_length=100)
+    infor = models.CharField(max_length=150)
+    diagnoz_serial = models.CharField(max_length=45)
+    ligodnik_serial = models.CharField(max_length=45)
+    diagnoz2 = models.CharField(max_length=200)
+    type_kursant = models.CharField(max_length=45)
+    type_ligodniy = models.CharField(max_length=45)
+    date_svodka = models.DateField()
+    type_patsient = models.CharField(max_length=100)
+
+    class Meta:
+        db_table = 'main'
